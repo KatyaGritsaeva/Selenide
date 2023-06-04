@@ -15,17 +15,15 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class AppCardDeliveryFirst {
 
-    private String generateDate(int addDays, String pattern){
+    private String generateDate(int addDays, String pattern) {
         return LocalDate.now().plusDays(addDays).format(DateTimeFormatter.ofPattern(pattern));
     }
 
     @Test
     void shouldSubmitRequest() {
         open("http://localhost:9999");
-        //SelenideElement form = $(".form");
         $("[data-test-id=city] input").setValue("Уфа");
-        String currentDate = generateDate (3, "dd.MM.yyyy");
-       // $("[data-test-id=date] input").setValue("07.06.2023");
+        String currentDate = generateDate(3, "dd.MM.yyyy");
         $("[data-test-id=name] input").setValue("Тестов Тест");
         $("[data-test-id=phone] input").setValue("+79999999999");
         $("[data-test-id=agreement]").click();

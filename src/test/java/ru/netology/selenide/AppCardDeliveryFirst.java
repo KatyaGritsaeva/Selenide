@@ -24,7 +24,7 @@ public class AppCardDeliveryFirst {
         open("http://localhost:9999");
         //SelenideElement form = $(".form");
         $("[data-test-id=city] input").setValue("Уфа");
-        String currentDate = generateDate (1, "dd.MM.yyyy");
+        String currentDate = generateDate (3, "dd.MM.yyyy");
        // $("[data-test-id=date] input").setValue("07.06.2023");
         $("[data-test-id=name] input").setValue("Тестов Тест");
         $("[data-test-id=phone] input").setValue("+79999999999");
